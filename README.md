@@ -26,7 +26,7 @@ A proxy between your router and [Cloudflare](https://www.cloudflare.com)'s API, 
 
 Then if your router has some sort of `custom_url` setting for Dynamic DNS, give it:
 
-    `https://somelogin:somepassword@wherever-you-deployed.herokuapp.com/`
+  _https://somelogin:somepassword@wherever-you-deployed.herokuapp.com/_
 
 and you should be good to go.
 
