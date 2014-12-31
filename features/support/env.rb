@@ -3,6 +3,9 @@
 ENV['RACK_ENV'] = 'test'
 ENV['USERNAME'] = 'foo'
 ENV['PASSWORD'] = 'bar'
+ENV['DYNAMIC_HOST'] = 'dynamic.example.org'
+ENV['CF_USERNAME'] = 'derp@derp.org'
+ENV['CF_TOKEN'] = 'fdsafgfadsgfdsgfds'
 
 require File.join(File.dirname(__FILE__), '..', '..', 'lib/dynamic_cloudflare.rb')
 
