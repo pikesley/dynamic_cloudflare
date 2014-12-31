@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'dotenv'
+require 'httparty'
 
 Dotenv.load
 
@@ -9,7 +10,19 @@ class DynamicCloudflare < Sinatra::Base
   end
 
   get '/' do
-    erb "Hello #{request.ip} from DynamicCloudflare!"
+    url = 'https://www.cloudflare.com/api.html?a=DIUP'
+    url << '&hosts='
+    url << ENV['DYNAMIC_HOST']
+    url << '&u='
+    url << ENV['CF_USERNAME']
+    url << '&tkn='
+    url << ENV['CF_TOKEN']
+    url << '&ip='
+    url << request.ip
+
+    HTTParty.get url
+
+    erb "Updating dynamic ip to #{request.ip}"
   end
 
   # start the server if ruby file executed directly
