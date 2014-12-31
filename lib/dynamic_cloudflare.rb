@@ -9,7 +9,7 @@ class DynamicCloudflare < Sinatra::Base
   end
 
   get '/' do
-    erb 'Hello DynamicCloudflare!'
+    erb "Hello #{request.ip} from DynamicCloudflare!"
   end
 
   # start the server if ruby file executed directly

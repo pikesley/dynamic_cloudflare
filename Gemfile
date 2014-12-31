@@ -12,4 +12,6 @@ group :test do
   gem 'cucumber-sinatra'
   gem 'capybara'
   gem 'cucumber-api-steps', require: false
+  gem 'rake'
+  gem 'coveralls'
 end
