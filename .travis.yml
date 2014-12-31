@@ -1,3 +1,10 @@
 language: ruby
 rvm:
 - 2.1.5
+deploy:
+  provider: heroku
+  api_key:
+    secure: ItB1y+QLEZ9jQnvjU7iFhK9SWWr9MGAhXPrBIdmvXW5kuhR78v0vv25en/7gZFZ/KhxN986MnXxjMeoQ1qvQZUz65amK5UnMxYTIf2xsWhsD6Q6UpYt8MZFan5ojXeVRlHtoBtgStWTdyUPi6nLy5lkV02OvZGECwJJb7XDun4w=
+  app: dynamic-cloudflare
+  on:
+    repo: pikesley/dynamic_cloudflare
